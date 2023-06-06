@@ -1,0 +1,40 @@
+[
+  {
+    "name": "コンテナ名",
+    "image": "イメージURI",
+    "essential": true,
+    "network_mode": "awsvpc",
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-group": "ロググループ名",
+        "awslogs-stream-prefix": "コンテナ名"
+      }
+    }
+  },
+  {
+    "name": "コンテナ名",
+    "image": "イメージURI",
+    "essential": true,
+    "network_mode": "awsvpc",
+    "portMappings": [
+      {
+        "containerPort": 9000
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-group": "ロググループ名",
+        "awslogs-stream-prefix": "コンテナ名"
+      }
+    }
+  }
+]
